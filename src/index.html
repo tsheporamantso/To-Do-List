@@ -4,33 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>To Do List Title Page</title>
   </head>
 
   <body>
     <main class="tasks">
-      <section class="section">
-        <div class="title flex">
-          <p>Today's To Do</p>
-          <span>&#8635;</span>
-        </div>
-        <ul class="add-tasks">
-          <li class="add-task">
-            <form class="form">
-              <input
-                class="new-item"
-                type="text"
-                name=""
-                id="newitem"
-                placeholder="Add task to your list..."
-              />
-              <span>&#8629;</span>
-            </form>
-          </li>
-        </ul>
-        <ul class="tasklist"></ul>
-        <button class="clear-all" type="button">Clear all completed</button>
+      <section class="section" >
+       <div class="title flex">
+       <p>Today To Do List </p>
+       <i class="fa-solid fa-rotate delete-all"></i>
+      </div>
+       <ul class="add-tasks">
+        <li class="add-task">
+         <form class="form">
+          <input class="new-item" type="text" name="" id="new-item" placeholder="Add task to you list">
+          <button class="btn-add" type="submit"><i class="fa-solid fa-plus"></i></button>
+          
+         </form>
+        </li>
+       </ul>
+       <ul class="task-list">
+       </ul>
+    
+       <button type="button" class="clear-all">Clear all completed</button>
       </section>
-    </main>
+     </main>
   </body>
 </html>
