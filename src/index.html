@@ -11,30 +11,25 @@
     <main class="tasks">
       <section class="section">
         <div class="title flex">
-          <ul class="addTasks flex"></ul>
-          <ul>
-            <li>
-              <div class="titleIcon">
-                <p>Today's To Do</p>
-                <span>&#8635;</span>
-              </div>
-            </li>
-            <li class="addTask">
-              <form class="form flex">
-                <input
-                  class="newItem"
-                  type="text"
-                  name=""
-                  id="newItem"
-                  placeholder="Add task to your list..."
-                />
-                <span>&#8629;</span>
-              </form>
-            </li>
-          </ul>
+          <p>Today's To Do</p>
+          <span>&#8635;</span>
         </div>
-        <ul class="taskList"></ul>
-        <button class="clearAllBtn" type="button">Clear all completed</button>
+        <ul class="add-tasks">
+          <li class="add-task">
+            <form class="form">
+              <input
+                class="new-item"
+                type="text"
+                name=""
+                id="newitem"
+                placeholder="Add task to your list..."
+              />
+              <span>&#8629;</span>
+            </form>
+          </li>
+        </ul>
+        <ul class="tasklist"></ul>
+        <button class="clear-all" type="button">Clear all completed</button>
       </section>
     </main>
   </body>
