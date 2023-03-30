@@ -1,4 +1,4 @@
-export default class TaskStatus {
+module.exports = class TaskStatus {
   constructor() {
     this.completed = false;
   }
@@ -10,4 +10,4 @@ export default class TaskStatus {
       unchecked = (task) => {
         task.completed = false;
       };
-}
+};

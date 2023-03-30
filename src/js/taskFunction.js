@@ -8,11 +8,9 @@ class Todolist {
 
   displayTask = () => {
     const taskList = document.querySelector('.task-list');
-    if (this.taskData.length === 0) {
-      return;
+    if (taskList) {
+      taskList.innerHTML = '';
     }
-    taskList.innerHTML = '';
-
     this.taskData.forEach((elem) => {
       const li = [];
       li[elem.index] = document.createElement('li');
@@ -67,7 +65,7 @@ class Todolist {
           e.target.nextSibling.innerText,
         );
       });
-      if (this.taskData[elem.index].completed === false) {
+      if (this.taskData[elem.index].completed === true) {
         inputBox[elem.index].setAttribute('checked', 'checked');
         li[elem.index].classList.add('checked');
       } else if (this.taskData[elem.index].completed === false) {
