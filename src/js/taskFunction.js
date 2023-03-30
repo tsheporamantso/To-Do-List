@@ -1,4 +1,4 @@
-import Tasks from './task.js';
+import Tasks from './tasks.js';
 import TaskStatus from './taskStatus.js';
 
 class Todolist {
@@ -8,9 +8,11 @@ class Todolist {
 
   displayTask = () => {
     const taskList = document.querySelector('.task-list');
-    if (taskList) {
-      taskList.innerHTML = '';
+    if (this.taskData.length === 0) {
+      return;
     }
+    taskList.innerHTML = '';
+
     this.taskData.forEach((elem) => {
       const li = [];
       li[elem.index] = document.createElement('li');
@@ -65,7 +67,7 @@ class Todolist {
           e.target.nextSibling.innerText,
         );
       });
-      if (this.taskData[elem.index].completed === true) {
+      if (this.taskData[elem.index].completed === false) {
         inputBox[elem.index].setAttribute('checked', 'checked');
         li[elem.index].classList.add('checked');
       } else if (this.taskData[elem.index].completed === false) {
@@ -151,16 +153,3 @@ window.onload = () => {
   }
   entryTask.displayTask();
 };
-
-const clearAllTaskBtn = document.querySelector('.clear-all');
-clearAllTaskBtn.addEventListener('click', (e) => {
-  entryTask.clearAllCompletTask();
-  e.preventDefault();
-  window.location.reload();
-});
-
-const clearAllBtn = document.querySelector('.delete-all');
-clearAllBtn.addEventListener('click', () => {
-  window.localStorage.clear();
-  window.location.reload();
-});
