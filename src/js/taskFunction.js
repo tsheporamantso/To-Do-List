@@ -153,3 +153,16 @@ window.onload = () => {
   }
   entryTask.displayTask();
 };
+
+const clearAllTaskBtn = document.querySelector('.clear-all');
+clearAllTaskBtn.addEventListener('click', (e) => {
+  entryTask.clearAllCompletTask();
+  e.preventDefault();
+  window.location.reload();
+});
+
+const clearAllBtn = document.querySelector('.delete-all');
+clearAllBtn.addEventListener('click', () => {
+  window.localStorage.clear();
+  window.location.reload();
+});
