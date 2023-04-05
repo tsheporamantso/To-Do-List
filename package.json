@@ -4,6 +4,7 @@
   "description": "In this project I set up a simple to-do list and configure webpack",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "dev": "webpack --mode development",
     "start": "webpack serve --open"
   },
