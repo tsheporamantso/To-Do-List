@@ -3,7 +3,7 @@ const Todolist = require('./remove_additem.js');
 
 describe('testing addtask and removetask functions', () => {
   const arr = new Todolist();
-  const description = 'burak';
+  const description = 'tshepo';
   const completed = true;
   const index = 1;
   test('add task to arr', () => {
