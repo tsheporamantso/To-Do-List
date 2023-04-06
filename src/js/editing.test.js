@@ -3,7 +3,7 @@ const Todolist = require('./editing.js');
 
 describe('testing editing task', () => {
   const todo = new Todolist();
-  let description = 'burak';
+  let description = 'tshepo';
   const completed = true;
   const index = 1;
   todo.addtask(description, completed, index);
@@ -19,7 +19,7 @@ describe('testing editing task', () => {
   });
 
   test('changing status', () => {
-    const description = 'burak';
+    const description = 'tshepo';
     const completed = true;
     const index = 1;
     todo.addtask(description, completed, index);
