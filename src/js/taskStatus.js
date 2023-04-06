@@ -5,9 +5,11 @@ module.exports = class TaskStatus {
 
       checked = (task) => {
         task.completed = true;
+        return true;
       };
 
       unchecked = (task) => {
         task.completed = false;
+        return false;
       };
 };
